@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<!--Main Menu Start-->
+<header class="header-section">
+    <!--Navigation Menu-->
+    <nav class="main-menu">
+        <ul>
+            <li class="menu-active">
+                <a href="#">HOME</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">HOME STYLE 1</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">HOME STYLE 2 (VIDEO)</a>
+                        <div class="submenu-bg"></div></li>
+                    <li>
+                        <a href="#">HOME STYLE 3 (FULL GRID)</a>
+                        <div class="submenu-bg"></div>
+                        <ul>
+                            <li><a href="#">THIRD LEVEL MENU</a>
+                                <div class="submenu-bg"></div></li>
+                            <li><a href="#">THIRD LEVEL MENU</a>
+                                <div class="submenu-bg"></div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ABOUT US</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">STYLE 1 GRID HEADER</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">STYLE 2 FULLWIDTH IMAGE</a>
+                        <div class="submenu-bg"></div></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">OUR SERVICES</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">SERVICE STYLE 1</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">SERVICE STYLE 2</a>
+                        <div class="submenu-bg"></div></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PORTFOLIO</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">PORTFOLIO SINGLE PAGE</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">PORTFOLIO WITH SLIDER</a>
+                        <div class="submenu-bg"></div></li>
+                </ul>
+            </li>
+            <li><a href="#">GALLERY</a>
+                <div class="hover-active"></div></li>
+            <li>
+                <a href="#">BLOG</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">BLOG SINGLE PAGE</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">BLOG WITH SLIDER</a>
+                        <div class="submenu-bg"></div></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PAGE</a>
+                <div class="hover-active"></div>
+                <ul>
+                    <li><a href="#">GRID HEADER</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">FULL WIDTH</a>
+                        <div class="submenu-bg"></div></li>
+                    <li><a href="#">PAGE WITH SIDEBAR</a>
+                        <div class="submenu-bg"></div></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTACT US</a>
+                <div class="hover-active"></div></li>
+        </ul>
+    </nav>
+
+    <div id="navbtn">
+        <a href="#">
+            <img src="/Images/Icon/hide-menu.png" alt="responsive menu" />
+        </a>
+    </div>
+    <!--Navigation Menu End-->
+    <!--Logo-->
+    <div class="logo">
+        <a href="#"><img src="/Images/Icon/logo.png" alt="logo" /></a>
+    </div>
+    <!--Logo End-->
+    <!--Social Media-->
+    <nav class="social-main">
+        <ul>
+            <li><a href="#"><img src="/Images/Icon/social-icon-facebook.png" alt="Facebook" onMouseOver="this.src ='/Images/Icon/social-icon-facebook.png'" onMouseOut="this.src = '/Images/Icon/social-icon-facebook.png'" /></a></li>
+            <li><a href="#"><img src="/Images/Icon/social-icon-twitter.png"  alt="Twitter" onMouseOver="this.src = '/Images/Icon/social-icon-twitter.png'" onMouseOut="this.src = '/Images/Icon/social-icon-twitter.png'" /></a></li>
+            <li><a href="#"><img src="/Images/Icon/social-icon-pinterest.png"  alt="Pinterest" onMouseOver="this.src = '/Images/Icon/social-icon-pinterest.png'" onMouseOut="this.src = '/Images/Icon/social-icon-pinterest.png'" /></a></li>
+            <li><a href="#"><img src="/Images/Icon/social-icon-google-plus.png"  alt="Google Plus" onMouseOver="this.src = '/Images/Icon/social-icon-google-plus.png'" onMouseOut="this.src = '/Images/Icon/social-icon-google-plus.png'" /></a></li>
+            <li><a href="#"><img src="/Images/Icon/social-icon-feed.png"  alt="Feed" onMouseOver="this.src = '/Images/Icon/social-icon-feed.png'" onMouseOut="this.src = '/Images/Icon/social-icon-feed.png'" /></a></li>
+        </ul>
+    </nav>
+</header>
+<!--Main Menu End-->
+ 
+<!--All Content Start-->
+<div class="wrapper">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>
+<!--All Content End-->
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
