@@ -75,3 +75,5 @@ D:\Project\Comic\Comic\bin\System.Web.Http.Owin.xml
 D:\Project\Comic\Comic\obj\Debug\Comic.csprojResolveAssemblyReference.cache
 D:\Project\Comic\Comic\obj\Debug\Comic.dll
 D:\Project\Comic\Comic\obj\Debug\Comic.pdb
+D:\Project\Comic\Comic\bin\dotMemory.Unit.dll
+D:\Project\Comic\Comic\bin\dotMemory.Unit.xml

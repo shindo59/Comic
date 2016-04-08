@@ -1,0 +1,215 @@
+﻿@using System.Web.UI.WebControls
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/User/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/User/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/User/layerslider/css/layerslider.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+    @*@Styles.Render("~/Content/User/css")
+    @Styles.Render("~/Content/User/layerslider/css")
+    @Scripts.Render("~/Content/User/js")*@
+    @*<link href="~/Content/User/layerslider/skins/borderlessdark3d/skin.css" rel="stylesheet" type="text/css">*@
+</head>
+<body>
+    <header class="header-section">
+
+        <!--Navigation Menu-->
+        <nav class="main-menu">
+            <ul>
+                <li class="menu-active">
+                    <a href="#">HOME</a><div class="hover-active"></div>
+                    <ul>
+                        <li><a href="#">HOME STYLE 1</a><div class="submenu-bg"></div></li>
+                        <li><a href="#">HOME STYLE 2 (VIDEO)</a><div class="submenu-bg"></div></li>
+                        <li>
+                            <a href="#">HOME STYLE 3 (FULL GRID)</a><div class="submenu-bg"></div>
+                            <ul>
+                                <li><a href="#">THIRD LEVEL MENU</a><div class="submenu-bg"></div></li>
+                                <li><a href="#">THIRD LEVEL MENU</a><div class="submenu-bg"></div></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">ABOUT US</a><div class="hover-active"></div>
+                    <ul>
+                        <li><a href="#">STYLE 1 GRID HEADER</a><div class="submenu-bg"></div></li>
+                        <li><a href="#">STYLE 2 FULLWIDTH IMAGE</a><div class="submenu-bg"></div></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">OUR SERVICES</a><div class="hover-active"></div>
+                    <ul>
+                        <li><a href="#">SERVICE STYLE 1</a><div class="submenu-bg"></div></li>
+                        <li><a href="#">SERVICE STYLE 2</a><div class="submenu-bg"></div></li>
+                    </ul>
+                </li>
+                <li><a href="#">PORTFOLIO</a><div class="hover-active"></div></li>
+                <li><a href="#">GALLERY</a><div class="hover-active"></div></li>
+                <li>
+                    <a href="#">BLOG</a><div class="hover-active"></div>
+                    <ul>
+                        <li><a href="#">BLOG SINGLE PAGE</a><div class="submenu-bg"></div></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">PAGE</a><div class="hover-active"></div>
+                    <ul>
+                        <li><a href="#">GRID HEADER</a><div class="submenu-bg"></div></li>
+                        <li><a href="#">FULL WIDTH</a><div class="submenu-bg"></div></li>
+                        <li><a href="#">PAGE WITH SIDEBAR</a><div class="submenu-bg"></div></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTACT US</a><div class="hover-active"></div></li>
+            </ul>
+        </nav>
+
+        <div id="navbtn">
+            <a href="#">
+                <img src="/Images/User/hide-menu.png" alt="responsive menu" />
+            </a>
+        </div>
+        <!--Navigation Menu End-->
+        <!--Logo-->
+        <div class="logo">
+            <a href="#"><img src="/Images/User/logo.png" alt="logo" /></a>
+        </div>
+        <!--Logo End-->
+        <!--Social Media-->
+        <nav class="social-main">
+            <ul>
+                <li><a href="#"><img src="/Images/User/social-icon/social-icon-facebook.png" alt="Facebook" onMouseOver="this.src = '/Images/User/social-icon/social-icon-facebook.png';" onMouseOut="this.src = '/Images/User/social-icon/social-icon-facebook.png';" /></a></li>
+                <li><a href="#"><img src="/Images/User/social-icon/social-icon-twitter.png" alt="Twitter" onMouseOver="this.src = '/Images/User/social-icon/social-icon-twitter.png';" onMouseOut="this.src = '/Images/User/social-icon/social-icon-twitter.png';" /></a></li>
+                <li><a href="#"><img src="/Images/User/social-icon/social-icon-pinterest.png" alt="Pinterest" onMouseOver="this.src = '/Images/User/social-icon/social-icon-pinterest.png';" onMouseOut="this.src = '/Images/User/social-icon/social-icon-pinterest.png';" /></a></li>
+                <li><a href="#"><img src="/Images/User/social-icon/social-icon-google-plus.png" alt="Google Plus" onMouseOver="this.src = '/Images/User/social-icon/social-icon-google-plus.png';" onMouseOut="this.src = '/Images/User/social-icon/social-icon-google-plus.png';" /></a></li>
+                <li><a href="#"><img src="/Images/User/social-icon/social-icon-feed.png" alt="Feed" onMouseOver="this.src = '/Images/User/social-icon/social-icon-feed.png';" onMouseOut="this.src = '/Images/User/social-icon/social-icon-feed.png';" /></a></li>
+            </ul>
+        </nav>
+        <!--Social Media End-->
+
+    </header>
+    <!--Main Menu End-->
+<div class="wrapper">
+    @RenderBody()
+</div>
+
+    <div style="clear: both;"></div>
+
+    <!--Footer Start-->
+    <footer class="footer-section">
+
+        <!--Footer About Us-->
+        <section class="footer-about">
+            <div class="footer-content">
+                <figure>
+                    <img src="/Images/User/logo-footer.png" alt="footer logo" />
+                </figure>
+                <div class="footer-text">
+                    <br><p>Lorem ipsum dolor, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p><br>
+                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+                </div>
+            </div>
+        </section>
+        <!--Footer About Us End-->
+        <!--Footer Contact-->
+        <section class="footer-contact">
+            <h2 class="footer-title">CONTACT INFO</h2>
+            <div class="footer-content">
+                <ul>
+                    <li>
+                        <div class="contact-list footer-text">
+                            <span>Company Name<br>4884 Lilac Lane Statesboro, GA 30458</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list footer-text email">
+                            <span>Email: info@yourdomain.com</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-list footer-text phone">
+                            <span>Phone: 111-123-456-9999</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--Footer Contact End-->
+        <!--Footer Subscribe-->
+        <section class="footer-subscribe">
+            <h2 class="footer-title">NEWSLETTER</h2>
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>Subscribe now for free tips, update item and our promotion.</p>
+                </div>
+                <div class="subscribe-box">
+                    <form>
+                        <input class="first-name" type="text" name="firstname" placeholder="First name *" required />
+                        <input class="last-name" type="text" name="lastname" placeholder="Last name *" required />
+                        <input class="email" type="text" name="email" placeholder="Your email address *" required />
+                        <input class="subscribe-button" type="submit" value="SUBSCRIBE" />
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--Footer Subscribe End-->
+
+        <div style="clear: both;"></div>
+
+        <!--Footer Bottom-->
+        <section class="footer-bottom">
+            <div class="copyright">
+                Copyright © All Rights Reserved. <a href="#">yourdomain.com</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!--Footer Bottom End-->
+
+    </footer>
+    <!--Footer End-->
+
+<script type="text/javascript" src="~/Content/User/js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" charset="utf-8" src="~/Content/User/js/menu.js"></script>
+
+    <!--Placeholder Script-->
+    <script src="~/Content/User/js/placeholder.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$.fn.placeholder();
+    </script>
+
+    <!--Banner Slider Script-->
+    <script src="~/Content/User/layerslider/jQuery/jquery-easing-1.3.js" type="text/javascript"></script>
+    <script src="~/Content/User/layerslider/jQuery/jquery-transit-modified.js" type="text/javascript"></script>
+    <script src="~/Content/User/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="~/Content/User/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$('#layerslider').layerSlider({
+		    skinsPath: '/Content/User/layerslider/skins/',
+			skin : 'borderlessdark3d',
+			thumbnailNavigation : 'hover',
+			showCircleTimer : true,
+			showBarTimer : true,
+    		touchNav : true,
+			navStartStop : true,
+			animateFirstLayer : true,
+			responsive : true
+		});
+	});
+    </script>
+    @*@Scripts.Render("~/Content/User/js")
+    @Scripts.Render("~/Content/User/js")*@
+</body>
+</html>
