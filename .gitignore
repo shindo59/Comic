@@ -1,0 +1,4 @@
+*.cs
+Comic/App_Start/RouteConfig.cs
+*.config
+*.config
