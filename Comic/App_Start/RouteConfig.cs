@@ -15,7 +15,10 @@ namespace Comic
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                //Hieu DEL STT 4-10-2016
+                //url: "{controller}/{action}/{id}",
+                url: "{controller}/{action}",
+                //Hieu DEL END 4-10-2016
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
