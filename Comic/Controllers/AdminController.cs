@@ -8,8 +8,13 @@ namespace Comic.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admim
+        // GET: Admin
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
         {
             return View();
         }
