@@ -4,10 +4,449 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/Content/Admin/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Admin/css/londinium-theme.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Admin/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Admin/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Admin/css/css.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="~/Content/Admin/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/jquery/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/charts/sparkline.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/inputmask.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/autosize.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/inputlimit.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/listbox.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/multiselect.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/tags.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/switch.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/uploader/plupload.full.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/fancybox.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/jgrowl.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/datatables.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/colorpicker.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/plugins/interface/timepicker.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/Admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/Admin/js/application.js"></script>
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="~/Images/Admin/logo.png" alt="Londinium"></a>
+            <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
+                <span class="sr-only">Toggle navbar</span>
+                <i class="icon-grid3"></i>
+            </button>
+            <button type="button" class="navbar-toggle offcanvas">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="icon-paragraph-justify2"></i>
+            </button>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-people"></i>
+                    <span class="label label-default">2</span>
+                </a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                        <span>Activity</span>
+                        <a href="#" class="pull-right"><i class="icon-paragraph-justify"></i></a>
+                    </div>
+                    <ul class="activity">
+                        <li>
+                            <i class="icon-cart-checkout text-success"></i>
+                            <div>
+                                <a href="#">Eugene</a> ordered 2 copies of <a href="#">OEM license</a>
+                                <span>14 minutes ago</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon-heart text-danger"></i>
+                            <div>
+                                Your <a href="#">latest post</a> was liked by <a href="#">Audrey Mall</a>
+                                <span>35 minutes ago</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark3 text-success"></i>
+                            <div>
+                                Mail server was updated. See <a href="#">changelog</a>
+                                <span>About 2 hours ago</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon-paragraph-justify2 text-warning"></i>
+                            <div>
+                                There are <a href="#">6 new tasks</a> waiting for you. Don't forget!
+                                <span>About 3 hours ago</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-paragraph-justify2"></i>
+                    <span class="label label-default">6</span>
+                </a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                        <span>Messages</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <ul class="popup-messages">
+                        <li class="unread">
+                            <a href="#">
+                                <img src="#" alt="" class="user-face">
+                                <strong>Eugene Kopyov <i class="icon-attachment2"></i></strong>
+                                <span>Aliquam interdum convallis massa...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="#" alt="" class="user-face">
+                                <strong>Jason Goldsmith <i class="icon-attachment2"></i></strong>
+                                <span>Aliquam interdum convallis massa...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="#" alt="" class="user-face">
+                                <strong>Angel Novator</strong>
+                                <span>Aliquam interdum convallis massa...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="#" alt="" class="user-face">
+                                <strong>Monica Bloomberg</strong>
+                                <span>Aliquam interdum convallis massa...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="#" alt="" class="user-face">
+                                <strong>Patrick Winsleur</strong>
+                                <span>Aliquam interdum convallis massa...</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle">
+                    <i class="icon-grid"></i>
+                </a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                        <span>Tasks list</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th class="text-center">Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="status status-success item-before"></span> <a href="#">Frontpage fixes</a></td>
+                                <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                <td class="text-center"><span class="label label-success">87%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="status status-danger item-before"></span> <a href="#">CSS compilation</a></td>
+                                <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                <td class="text-center"><span class="label label-danger">18%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="status status-info item-before"></span> <a href="#">Responsive layout changes</a></td>
+                                <td><span class="text-smaller text-semibold">Layout</span></td>
+                                <td class="text-center"><span class="label label-info">52%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="status status-success item-before"></span> <a href="#">Add categories filter</a></td>
+                                <td><span class="text-smaller text-semibold">Content</span></td>
+                                <td class="text-center"><span class="label label-success">100%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="status status-success item-before"></span> <a href="#">Media grid padding issue</a></td>
+                                <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                <td class="text-center"><span class="label label-success">100%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+
+            <li class="user dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="#">
+                    <span>Eugene Kopyov</span>
+                    <i class="caret"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                    <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
+<!-- /navbar -->
+<!-- Page container -->
+<div class="page-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+
+            <!-- User dropdown -->
+            <div class="user-menu dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="#">
+                    <div class="user-info">
+                        Madison Gartner <span>Web Developer</span>
+                    </div>
+                </a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="thumbnail">
+                        <div class="thumb">
+                            <img src="#">
+                            <div class="thumb-options">
+                                <span>
+                                    <a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+                                    <a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="caption text-center">
+                            <h6>Madison Gartner <small>Front end developer</small></h6>
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="icon-pencil3 text-muted"></i> My posts <span class="label label-success">289</span></li>
+                        <li class="list-group-item"><i class="icon-people text-muted"></i> Users online <span class="label label-danger">892</span></li>
+                        <li class="list-group-item"><i class="icon-stats2 text-muted"></i> Reports <span class="label label-primary">92</span></li>
+                        <li class="list-group-item"><i class="icon-stack text-muted"></i> Balance <h5 class="pull-right text-danger">$45.389</h5></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /user dropdown -->
+            <!-- Main navigation -->
+            <ul class="navigation">
+                <li class="active"><a href="#"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
+                <li>
+                    <a href="#"><span>Form components</span> <i class="icon-paragraph-justify2"></i></a>
+                    <ul>
+                        <li><a href="#">Form components</a></li>
+                        <li><a href="#">Form layouts</a></li>
+                        <li><a href="#">Inputs grid</a></li>
+                        <li><a href="#">WYSIWYG editor</a></li>
+                        <li><a href="#">Validation</a></li>
+                        <li><a href="#">Multiple file uploader</a></li>
+                        <li><a href="#">Form snippets</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Interface components</span> <i class="icon-grid"></i></a>
+                    <ul>
+                        <li><a href="#">Visuals &amp; notifications</a></li>
+                        <li><a href="#">Navs</a></li>
+                        <li><a href="#">Panel options</a></li>
+                        <li><a href="#">Navbars</a></li>
+                        <li><a href="#">Info blocks</a></li>
+                        <li><a href="#">Icons <span class="label label-danger">850+</span></a></li>
+                        <li><a href="#">Buttons</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">Media gallery</a></li>
+                        <li><a href="#">Page header elements</a></li>
+                        <li><a href="#">Content grid</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Layouts</span> <i class="icon-copy"></i></a>
+                    <ul>
+                        <li><a href="#">Left wide sidebar</a></li>
+                        <li><a href="#">Right wide sidebar</a></li>
+                        <li><a href="#">Left narrow sidebar</a></li>
+                        <li><a href="#">Right narrow sidebar</a></li>
+                        <li><a href="#">Left aligned icons</a></li>
+                        <li><a href="#">Boxed layout <span class="label label-danger">New</span></a></li>
+                        <li><a href="#">Fixed navbar</a></li>
+                        <li><a href="#">Horizontal navigation</a></li>
+                        <li><a href="#">Sidebar &amp; Horizontal navigation</a></li>
+                        <li><a href="#">Disabled navigation items</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Task manager</span> <i class="icon-numbered-list"></i></a>
+                    <ul>
+                        <li><a href="#">Task grid</a></li>
+                        <li><a href="#">Task list</a></li>
+                        <li><a href="#">Task detailed</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span>Charts</span> <i class="icon-bars"></i></a></li>
+                <li>
+                    <a href="#"><span>User</span> <i class="icon-user"></i></a>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact list</a></li>
+                        <li><a href="#">User profile</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Support</span> <i class="icon-bubble6"></i></a>
+                    <ul>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Chat with tabs</a></li>
+                        <li><a href="#">Chat with contacts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Tables</span> <i class="icon-table2"></i></a>
+                    <ul>
+                        <li><a href="#">Static tables</a></li>
+                        <li><a href="#">Data tables</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span>Search page</span> <i class="icon-search3"></i></a></li>
+                <li>
+                    <a href="#"><span>Invoice</span> <i class="icon-coin"></i></a>
+                    <ul>
+                        <li><a href="#">Invoice template</a></li>
+                        <li><a href="#">Invoice list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Login page</span> <i class="icon-user-plus"></i></a>
+                    <ul>
+                        <li><a href="#">Simple login form</a></li>
+                        <li><a href="#">Login form with user image</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Error pages</span> <i class="icon-warning"></i></a>
+                    <ul>
+                        <li><a href="#">403 page</a></li>
+                        <li><a href="#">404 page</a></li>
+                        <li><a href="#">405 page</a></li>
+                        <li><a href="#">500 page</a></li>
+                        <li><a href="#">503 page</a></li>
+                        <li><a href="#">Offline page</a></li>
+                        <li><a href="#">Error page with sidebar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Blank pages</span> <i class="icon-insert-template"></i></a>
+                    <ul>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                        <li><a href="#">Collapsed sidebar</a></li>
+                        <li><a href="#">Full width page</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Navigation levels</span> <i class="icon-stack"></i></a>
+                    <ul>
+                        <li><a href="#">Second level first item</a></li>
+                        <li>
+                            <a href="#">Second level second item</a>
+                            <ul>
+                                <li><a href="#">Third level first item</a></li>
+                                <li>
+                                    <a href="#">Third level third item</a>
+                                    <ul>
+                                        <li><a href="#">Fourth level first item</a></li>
+                                        <li><a href="#">Fourth level second item</a></li>
+                                        <li><a href="#">Fourth level third item</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Third level second item</a></li>
+                                <li>
+                                    <a href="#">Third level third item</a>
+                                    <ul>
+                                        <li><a href="#">Fourth level first item</a></li>
+                                        <li><a href="#">Fourth level second item</a></li>
+                                        <li><a href="#">Fourth level third item</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Third level second item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Second level third item</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /main navigation -->
+
+        </div>
+    </div>
+    <!-- /sidebar -->
+
+    <!-- Page content -->
+<div class="page-content">
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Dashboard <small>Welcome Eugene. 12 hours since last visit</small></h3>
+        </div>
+
+        <div id="reportrange" class="range">
+            <div class="visible-xs header-element-toggle">
+                <a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a>
+            </div>
+            <div class="date-range"></div>
+            <span class="label label-danger">9</span>
+        </div>
+    </div>
+    <!-- /page header -->
+    @RenderBody()
+    <!-- Footer -->
+    <div class="footer clearfix">
+        <div class="pull-left">&copy; 2013. Londinium Admin Template by <a href="http://themeforest.net/user/Kopyov">Eugene Kopyov</a>
+        </div>
+        <div class="pull-right icons-group">
+            <a href="#"><i class="icon-screen2"></i></a>
+            <a href="#"><i class="icon-balance"></i></a>
+            <a href="#"><i class="icon-cog3"></i></a>
+        </div>
+    </div>
+    <!-- /footer -->
+</div>
+    <!-- /page content -->
+</div>
+<!-- /page container -->
+    
 </body>
 </html>
